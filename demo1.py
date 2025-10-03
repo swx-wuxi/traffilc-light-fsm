@@ -2,12 +2,11 @@ from enum import Enum, auto
 import time
 import argparse
 
-
 class State(Enum):
     RED = auto()
     GREEN = auto()
     YELLOW = auto()
-
+    BLINKING_YELLOW = auto()
 
 class TrafficLightFSM:
     """一个简单的交通灯有限状态机：RED → GREEN → YELLOW → RED"""
@@ -26,6 +25,11 @@ class TrafficLightFSM:
         else:
             raise ValueError(f"Invalid state: {self.state}")
         return self.state
+    
+    def enter_blinking_mode(self):
+        """强制进入闪烁黄灯模式"""
+        self.state = State.BLINKING_YELLOW
+        print("Entering BLINKING_YELLOW mode...")
 
     def cycle(self, steps: int = 1, delay: float | None = None, include_start: bool = True) -> None:
         """
@@ -37,6 +41,10 @@ class TrafficLightFSM:
         if include_start:
             print(self.state.name)
         for _ in range(steps):
+            if self.state == State.BLINKING_YELLOW:
+                print("BLINKING_YELLOW")
+                time.sleep(1)
+                continue
             self.next_state()
             print(self.state.name)
             if delay and delay > 0:
@@ -51,6 +59,7 @@ def main():
     args = parser.parse_args()
 
     fsm = TrafficLightFSM()
+    fsm.enter_blinking_mode()
     fsm.cycle(steps=args.steps, delay=args.delay, include_start=(not args.no_start))
 
 
