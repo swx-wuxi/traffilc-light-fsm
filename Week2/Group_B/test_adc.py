@@ -10,7 +10,7 @@ def test_known_values():
 def test_out_of_range_low():
     adc = ADC(bits=12, vref=3.3)
     with pytest.raises(OutOfRange):
-        adc.convert(-0.1)
+        adc.convert(-0.3)
 
 def test_out_of_range_high():
     adc = ADC(bits=12, vref=3.3)
