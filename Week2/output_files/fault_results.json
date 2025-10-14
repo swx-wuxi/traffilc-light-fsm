@@ -1,0 +1,62 @@
+[
+  [
+    "adc_spike",
+    593,
+    "OK",
+    0.5796676441837733
+  ],
+  [
+    "adc_spike",
+    135,
+    "OK",
+    0.13196480938416422
+  ],
+  [
+    "sign_flip",
+    -412,
+    "ERROR",
+    "Out-of-range sensor reading"
+  ],
+  [
+    "sign_flip",
+    -949,
+    "ERROR",
+    "Out-of-range sensor reading"
+  ],
+  [
+    "adc_spike",
+    15,
+    "OK",
+    0.01466275659824047
+  ],
+  [
+    "sign_flip",
+    -485,
+    "ERROR",
+    "Out-of-range sensor reading"
+  ],
+  [
+    "overflow",
+    65729,
+    "ERROR",
+    "Out-of-range sensor reading"
+  ],
+  [
+    "missing",
+    null,
+    "ERROR",
+    "Missing reading"
+  ],
+  [
+    "overflow",
+    66529,
+    "ERROR",
+    "Out-of-range sensor reading"
+  ],
+  [
+    "overflow",
+    66043,
+    "ERROR",
+    "Out-of-range sensor reading"
+  ]
+]

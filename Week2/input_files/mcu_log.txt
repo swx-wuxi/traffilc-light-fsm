@@ -1,0 +1,9 @@
+[00:00:01] MCU Booting...
+[00:00:02] System clock set to 72MHz
+[00:00:03] Initializing peripherals...
+[00:00:04] UART initialized on COM3 
+[00:00:05] Running self-test: ERROR
+[00:00:06] Running sensor calibration...
+[00:00:07] ASSERT_FAIL: Sensor timeout after 500ms
+[00:00:08] System entering safe mode
+[00:00:09] Logging complete.
